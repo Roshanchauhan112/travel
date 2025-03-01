@@ -1,0 +1,777 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+
+<body class="bg-white">
+
+    <header class="fixed top-0 left-0 w-full z-50">
+        <nav class="bg-white shadow-md">
+            <div class="container mx-auto flex justify-between items-center p-4">
+                <!-- Logo -->
+                <a href="#" class="text-2xl font-medium uppercase text-gray-900">Travel Explorer</a>
+
+                <!-- Hamburger Menu (Mobile) -->
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Links (Desktop) -->
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Home</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Destination</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Package</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Gallery</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Tour</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">About</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Pricing</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Account</a></li>
+                </ul>
+            </div>
+
+            <!-- Mobile Menu (Hidden by Default) -->
+            <div id="mobile-menu" class="hidden md:hidden fixed inset-y-0 right-0 w-64 bg-white shadow-lg z-50">
+                <div class="flex justify-end p-4">
+                    <button id="menu-close" class="text-gray-900 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <ul class="flex flex-col space-y-4 p-4">
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Home</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Destination</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Package</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Gallery</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Tour</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">About</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Pricing</a></li>
+                    <li><a href="#" class="text-gray-900 font-semibold hover:text-gray-700">Account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+    <main class="bg-cover bg-center pt-20">
+
+        <section class="hero w-[99%] rounded-md bg-slate-400 m-auto h-[89vh] relative" onmouseover="playVideo()"
+            onmouseout="pauseVideo()">
+            <!-- Video Background -->
+            <video id="hero-video" src="/assets/hero.mp4" class="w-full h-full object-cover rounded-md" muted
+                loop></video>
+
+
+            <!-- Main Content -->
+            <div class="absolute inset-0 bg-black opacity-50 rounded-md">
+                <!-- Main Content -->
+                <div class="absolute top-10 left-5 md:top-14 md:left-10 text-white">
+                    <h1 class="text-4xl md:text-6xl leading-tight font-medium gap-5">
+                        Discover the Roof <br> of the World — <br>
+                        Adventure Awaits in <br>
+                        Majestic Nepal!
+                    </h1>
+                    <a href="#"
+                        class="mt-4 md:mt-6 inline-block text-xs bg-white text-black px-3 py-2 rounded-full font-semibold hover:bg-gray-100 hover:animate-bounce">
+                        Get in touch <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+
+                <!-- Secondary Content -->
+                <div class="absolute bottom-10 left-5 right-5 md:text-center md:top-96 md:right-10 text-white">
+                    <p class="text-sm md:text-base text-center md:text-center">
+                        Ready for the adventure of a lifetime? Join us on this incredible Nepal journey and create
+                        memories that last forever!
+                    </p>
+                    <div class="flex flex-wrap justify-center items-center mt-4 gap-2 md:gap-14">
+                        <a href="#">
+                            <p
+                                class="px-3 py-1 md:px-5 md:py-2 font-normal bg-gray-600 bg-opacity-75 rounded-full text-sm md:text-base">
+                                Mountain</p>
+                        </a>
+                        <a href="#">
+                            <p
+                                class="px-3 py-1 md:px-5 md:py-2 font-normal bg-gray-600 bg-opacity-75 rounded-full text-sm md:text-base">
+                                Outdoor</p>
+                        </a>
+                        <a href="#">
+                            <p
+                                class="px-3 py-1 md:px-5 md:py-2 font-normal bg-gray-600 bg-opacity-75 rounded-full text-sm md:text-base">
+                                Beach</p>
+                        </a>
+                        <a href="#">
+                            <p
+                                class="px-3 py-1 md:px-5 md:py-2 font-normal bg-gray-600 bg-opacity-75 rounded-full text-sm md:text-base">
+                                Temples</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="pt-7 w-full px-4 md:px-0">
+            <div class="container mx-auto">
+                <div class="mx-auto flex max-w-5xl flex-col items-center">
+                    <div class="z-10 flex flex-col items-center gap-6 md:gap-8 text-center">
+                        <div class="max-w-screen-md">
+                            <h1 class="mb-4 text-pretty text-2xl md:text-4xl font-semibold uppercase">
+                                Embark on an Unforgettable Journey with Travel Explorer
+                            </h1>
+                            <p class="text-zinc-600 text-sm md:text-xl">
+                                Discover breathtaking destinations, thrilling adventures, and serene escapes. Whether
+                                you
+                                crave towering mountains, peaceful beaches, or ancient temples — we bring your dream
+                                travels
+                                to life. Let’s explore the world together!
+                            </p>
+                        </div>
+                        <div class="flex w-full flex-col sm:flex-row justify-center gap-2">
+                            <button
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-zinc-900 text-white hover:bg-zinc-900/90 h-10 px-4 py-2">
+                                Get started now
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 h-4">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </button>
+                            <button
+                                class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-zinc-100 hover:text-zinc-800 h-10 px-4 py-2">
+                                Contact-Us
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 h-4">
+                                    <path d="m9 18 6-6-6-6"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Grid Section -->
+                <div class="mx-auto mt-10 md:mt-20 max-w-7xl grid grid-cols-1 md:grid-cols-5 gap-4">
+                    <!-- Large Image -->
+                    <img src="https://images.unsplash.com/photo-1519205440629-9850a2cd1780?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="placeholder" class="col-span-1 md:col-span-3 h-96 w-full object-cover rounded-lg" />
+
+                    <!-- Small Image with Button -->
+                    <div class="relative col-span-1 md:col-span-2">
+                        <img src="https://images.unsplash.com/photo-1589088428702-3ea38a574498?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="placeholder"
+                            class="h-96 w-full object-cover rounded-lg border-t md:border-l lg:border-t-0" />
+                        <button
+                            class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-white hover:bg-zinc-100 hover:text-zinc-800 h-10 px-4 py-2 absolute bottom-4 right-4">
+                            Learn more
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-chevron-right ml-2 h-4">
+                                <path d="m9 18 6-6-6-6"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-gray-600 body-font">
+            <div class="container px-5 py-12 md:py-24 mx-auto">
+                <div class="flex flex-wrap -m-2 text-center">
+                    <!-- Stat 1: Satisfaction Rate -->
+                    <div class="p-2 w-1/2 sm:w-1/4">
+                        <h2 class="title-font font-medium text-2xl sm:text-4xl text-gray-900">95%</h2>
+                        <p class="leading-relaxed text-sm sm:text-base">Satisfaction Rate</p>
+                    </div>
+
+                    <!-- Stat 2: Guided Tour Annually -->
+                    <div class="p-2 w-1/2 sm:w-1/4">
+                        <h2 class="title-font font-medium text-2xl sm:text-4xl text-gray-900">1.8K</h2>
+                        <p class="leading-relaxed text-sm sm:text-base">Guided Tour Annually</p>
+                    </div>
+
+                    <!-- Stat 3: Destinations -->
+                    <div class="p-2 w-1/2 sm:w-1/4">
+                        <h2 class="title-font font-medium text-2xl sm:text-4xl text-gray-900">150+</h2>
+                        <p class="leading-relaxed text-sm sm:text-base">Destinations</p>
+                    </div>
+
+                    <!-- Stat 4: Positive Review -->
+                    <div class="p-2 w-1/2 sm:w-1/4">
+                        <h2 class="title-font font-medium text-2xl sm:text-4xl text-gray-900">2k</h2>
+                        <p class="leading-relaxed text-sm sm:text-base">Positive Review</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full mx-auto h-auto py-12 flex flex-col items-center">
+            <!-- Heading Section -->
+            <div class="text-center px-4">
+                <h2 class="text-4xl md:text-6xl font-semibold mb-4">
+                    Top values for you
+                </h2>
+                <p class="text-gray-700 text-base md:text-lg">
+                    Try a variety of benefits when using our services
+                </p>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="flex justify-center w-full px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10">
+                    <!-- Card 1 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center h-64 w-full">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-500">
+                            <i class="fas fa-award text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4">Quality</h3>
+                        <p class="text-gray-600 mt-2">We provide the best quality service for you</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center h-64 w-full">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full bg-green-100 text-green-500">
+                            <i class="fas fa-calendar-check text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4">Easy Booking</h3>
+                        <p class="text-gray-600 mt-2">Book your trips easily with our user-friendly platform.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center h-64 w-full">
+                        <div
+                            class="flex items-center justify-center h-16 w-16 rounded-full bg-yellow-100 text-yellow-500">
+                            <i class="fas fa-user-tie text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4">Best Tour Guide</h3>
+                        <p class="text-gray-600 mt-2">Our experienced tour guides ensure you have an unforgettable
+                            journey.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="bg-white rounded-lg shadow-lg p-4 flex flex-col items-center text-center h-64 w-full">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-red-100 text-red-500">
+                            <i class="fas fa-handshake text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mt-4">Lots of Promises</h3>
+                        <p class="text-gray-600 mt-2">We make sure to fulfill all our promises to give you the best
+                            experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Choose Your Tour Section -->
+        <section class="w-full mx-auto py-12">
+            <div class="container mx-auto px-4">
+                <!-- Section Heading -->
+                <div class="text-center">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4">Choose Your Tour</h2>
+                    <p class="text-gray-600 text-lg">Explore our top destinations and find your next adventure.</p>
+                </div>
+
+                <!-- Destination Cards Grid -->
+                <div class="flex justify-center">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 mt-10 mx-auto">
+                        <!-- Card 1 -->
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 1" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Alone with nature</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 2" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 2</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1526938084645-692eb352bf7e?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 3" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 3</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 4" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 4</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hidden Cards (5-16) -->
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://plus.unsplash.com/premium_photo-1661902004576-4680d275f234?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 5" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 5</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://plus.unsplash.com/premium_photo-1661902004576-4680d275f234?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 5" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 5</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://plus.unsplash.com/premium_photo-1661902004576-4680d275f234?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 5" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 5</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="destination-card w-60 h-72 border shadow-sm rounded-lg overflow-hidden hidden">
+                            <!-- Image with Rating Bar -->
+                            <div class="relative">
+                                <img src="https://plus.unsplash.com/premium_photo-1661902004576-4680d275f234?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                    alt="Destination 5" class="w-full rounded-lg h-48 object-cover">
+
+                                <!-- Rating Bar -->
+                                <div
+                                    class="absolute top-2 right-2 bg-black bg-opacity-20 rounded-full px-2 py-1 flex items-center gap-1">
+                                    <span class="text-white text-sm ">★</span>
+                                    <span class="text-white text-sm ">4.5</span>
+                                </div>
+                            </div>
+
+                            <!-- Card Content -->
+                            <div class="p-4">
+                                <h3 class="text-xl font-semibold">Destination 5</h3>
+                                <div class="flex items-center gap-10 mt-2">
+                                    <p class=""><strong>₹10k</strong>/per person</p>
+                                    <i
+                                        class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add more cards here (up to 16) -->
+                        <!-- Example: Repeat the above structure for cards 6-16 -->
+                    </div>
+                </div>
+
+                <!-- Show More / Show Less Button -->
+                <div class="flex justify-center mt-10">
+                    <button id="show-more-btn" class=" text-black px-6 py-2 rounded-3xl border transition">
+                        Show More
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative w-full sm:w-[80%] h-80 p-3 overflow-hidden rounded-lg mx-auto">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1663135628452-a771e7a7b620?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Scenic Landscape with mountains and a lake" class="w-full h-full object-cover rounded-lg"
+                loading="lazy">
+        
+            <!-- Top Left Div -->
+            <div
+                class="absolute top-5 left-5 text-white p-4 sm:p-6 rounded-lg max-w-[200px] sm:max-w-[300px] bg-black/50">
+                <h2 class="text-lg sm:text-xl font-semibold sm:text-7xl">Enjoy your <br> travel</h2>
+                <p class="mt-2 text-xs sm:text-sm">This is some text on the top left corner of the image.</p>
+                <button
+                    class="mt-4 inline-block text-xs bg-white text-black px-3 py-2 rounded-full font-semibold hover:bg-gray-100">
+                    Book Now <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        
+            <!-- Bottom Right Div -->
+            <div
+                class="absolute bottom-5 right-5 sm:right-64 text-white p-4 sm:p-6 rounded-xl border border-white h-40 w-32 sm:h-56 sm:w-48 bg-black/50 flex items-center justify-center">
+                <!-- Optional content can be added here -->
+            </div>
+        </section>
+
+        <section class="flex flex-col sm:flex-row w-full h-auto sm:h-56 p-3 mt-6">
+            <!-- Left Column -->
+            <div class="w-full sm:w-1/2 text-4xl sm:text-6xl pl-4 sm:pl-8">
+                <p>Blog about <br> Traveling</p>
+            </div>
+        
+            <!-- Right Column -->
+            <div class="w-full sm:w-1/2 text-base sm:text-lg text-justify mt-4 sm:mt-0">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad dolore reprehenderit dolorem incidunt,
+                    veritatis reiciendis necessitatibus nam quod accusantium quae explicabo pariatur. Veniam autem
+                    corrupti perferendis, illum ullam officia numquam repellat est eius, corporis consequuntur
+                    accusantium inventore nobis quaerat assumenda.
+                </p>
+        
+                <button
+                    class="mt-4 inline-block text-xs bg-white text-black px-3 border py-2 rounded-full font-semibold hover:bg-gray-100">
+                    Read All Articles <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </section>
+
+        <section class="w-full p-5 flex flex-col sm:flex-row" style="height: auto; min-height: 500px;">
+            <!-- Left Side: Centered Container with Image -->
+            <div
+                class="bg-white rounded-lg shadow-lg overflow-hidden w-full sm:w-1/2 transition-transform duration-300 hover:scale-105 mb-4 sm:mb-0">
+                <img src="https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    alt="Left Image" class="w-full h-48 sm:h-64 object-cover">
+                <div class="p-4">
+                    <p class="text-lg font-semibold text-gray-800">Hiking in the Mountains</p>
+                    <p class="text-sm text-gray-600 mt-2">Experience the beauty of nature with a thrilling hike through scenic mountain trails.</p>
+                    <div class="flex items-center justify-between mt-4 flex-wrap">
+                        <div class="flex gap-2">
+                            <button
+                                class="px-4 py-2 text-black border rounded-3xl text-xs sm:text-sm transition-colors duration-300">
+                                Explore More
+                            </button>
+                            <button
+                                class="px-4 py-2 text-black border rounded-3xl text-xs sm:text-sm transition-colors duration-300">
+                                Explore More
+                            </button>
+                            <button
+                                class="px-4 py-2 text-black border rounded-3xl text-xs sm:text-sm transition-colors duration-300">
+                                Explore More
+                            </button>
+                        </div>
+                        <button
+                            class="inline-block text-xs bg-black text-white px-3 border py-2 rounded-full font-semibold hover:bg-gray-800">
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Right Side: Two Images Stacked Vertically -->
+            <div class="w-full sm:w-1/2 h-full flex flex-col gap-4 sm:pl-4">
+                <!-- Top Card -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden w-full transition-transform duration-300 hover:scale-105">
+                    <img src="https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Top Image" class="w-full h-32 sm:h-40 object-cover">
+                    <div class="p-2">
+                        <p class="text-sm font-semibold text-gray-800">Hiking in the Mountains</p>
+                        <p class="text-xs text-gray-600">Experience the beauty of nature with a thrilling hike through scenic mountain trails.</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <div class="flex gap-2">
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                            </div>
+                            <button
+                                class="inline-block text-xs bg-black text-white px-3 border py-2 rounded-full font-semibold hover:bg-gray-800">
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Bottom Card -->
+                <div
+                    class="bg-white rounded-lg shadow-lg overflow-hidden w-full transition-transform duration-300 hover:scale-105">
+                    <img src="https://plus.unsplash.com/premium_photo-1661810803959-f91f5195138e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="Bottom Image" class="w-full h-32 sm:h-40 object-cover">
+                    <div class="p-2">
+                        <p class="text-sm font-semibold text-gray-800">Hiking in the Mountains</p>
+                        <p class="text-xs text-gray-600">Experience the beauty of nature with a thrilling hike through scenic mountain trails.</p>
+                        <div class="flex justify-between items-center mt-2">
+                            <div class="flex gap-2">
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                                <button
+                                    class="px-3 py-2 text-black border rounded-3xl text-xs transition-colors duration-300">
+                                    Explore More
+                                </button>
+                            </div>
+                            <button
+                                class="inline-block text-xs bg-black text-white px-3 border py-2 rounded-full font-semibold hover:bg-gray-800">
+                                <i class="fas fa-arrow-right ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="relative w-full h-80 p-3 overflow-hidden rounded-lg mx-auto mt-10">
+            <!-- Background Image -->
+            <img src="https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Scenic Landscape" class="w-full h-full object-cover rounded-lg" loading="lazy">
+
+            <!-- Text and Button -->
+            <div
+                class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white p-4rounded-lg">
+                <h2 class="text-2xl font-semibold mb-2">#Explore the Beauty of Nature</h2>
+                <p class="mb-4">Join us on an unforgettable journey to the most beautiful places on Earth.</p>
+                <button class="bg-white text-black px-4 py-2 rounded-full font-semibold hover:bg-gray-100">
+                    Book Now <i class="fas fa-arrow-right ml-2"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 w-full h-auto text-gray-600 py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-400 transition-colors duration-300">Home</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition-colors duration-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition-colors duration-300">Tour Packages</a>
+                        </li>
+                        <li><a href="#" class="hover:text-gray-400 transition-colors duration-300">Gallery</a></li>
+                        <li><a href="#" class="hover:text-gray-400 transition-colors duration-300">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li><i class="fas fa-map-marker-alt mr-2"></i>Gorakhpur,Uttar pradesh</li>
+                        <li><i class="fas fa-phone-alt mr-2"></i>+91-8783434535</li>
+                        <li><i class="fas fa-envelope mr-2"></i>info@gyanvi.com</li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center">
+                <p>&copy; 2023 Nepal Trip. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const video = document.getElementById('hero-video');
+
+        function playVideo() {
+            video.play();
+        }
+
+        function pauseVideo() {
+            video.pause();
+        }
+
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+        });
+
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const destinationCards = document.querySelectorAll('.destination-card');
+        let isExpanded = false;
+
+        // Initially hide all cards except the first 4
+        for (let i = 4; i < destinationCards.length; i++) {
+            destinationCards[i].classList.add('hidden');
+        }
+
+        showMoreBtn.addEventListener('click', () => {
+            if (isExpanded) {
+                // Hide additional cards (show only first 4)
+                for (let i = 4; i < destinationCards.length; i++) {
+                    destinationCards[i].classList.add('hidden');
+                }
+                showMoreBtn.textContent = 'Show More';
+            } else {
+                // Show all cards
+                for (let i = 4; i < destinationCards.length; i++) {
+                    destinationCards[i].classList.remove('hidden');
+                }
+                showMoreBtn.textContent = 'Show Less';
+            }
+            isExpanded = !isExpanded;
+        });
+    </script>
+
+</body>
+
+</html>

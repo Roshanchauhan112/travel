@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto-Scroll Destination Cards</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-gray-600 {
+            color: #666;
+        }
+
+        .destination-cards-container {
+            display: flex;
+            overflow-x: hidden;
+            /* Hide the scrollbar */
+            scroll-behavior: smooth;
+            /* Smooth scrolling */
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .destination-card {
+            flex: 0 0 auto;
+            /* Ensure cards don't shrink or grow */
+            width: 240px;
+            /* Fixed width for each card */
+            margin-right: 20px;
+            /* Add spacing between cards */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .destination-card .relative {
+            position: relative;
+        }
+
+        .destination-card .rating-bar {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .destination-card .p-4 {
+            padding: 16px;
+        }
+
+        .destination-card h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .destination-card p {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .destination-card .fas {
+            cursor: pointer;
+        }
+
+        .bg-blue-600 {
+            background-color: #2563eb;
+        }
+
+        .hover\:bg-blue-700:hover {
+            background-color: #1d4ed8;
+        }
+
+        .text-white {
+            color: white;
+        }
+
+        .px-6 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .py-2 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .rounded-lg {
+            border-radius: 8px;
+        }
+
+        .transition {
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="w-full mx-auto py-12">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="text-center">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Choose Your Tour</h2>
+                <p class="text-gray-600 text-lg">Explore our top destinations and find your next adventure.</p>
+            </div>
+
+            <!-- Destination Cards Grid -->
+            <div class="destination-cards-container">
+                <!-- Card 1 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 1">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Alone with Nature</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 2">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 2</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1526938084645-692eb352bf7e?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 3">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 3</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 4">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 4</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://plus.unsplash.com/premium_photo-1664368832311-7fe635e32c7c?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 1">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Alone with Nature</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1528543606781-2f6e6857f318?q=80&w=1530&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 2">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 2</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1526938084645-692eb352bf7e?q=80&w=1450&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 3">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 3</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="destination-card">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            alt="Destination 4">
+                        <div class="rating-bar">
+                            <span>★</span>
+                            <span>4.5</span>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <h3>Destination 4</h3>
+                        <div class="flex items-center gap-10 mt-2">
+                            <p><strong>₹10k</strong>/per person</p>
+                            <i
+                                class="fas fa-arrow-right ml-2 p-2 rounded-full text-xs bg-black text-white flex items-center text-center justify-center w-7 h-7"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more cards here -->
+            </div>
+
+            <!-- Show More / Show Less Button -->
+            <div class="flex justify-center mt-10">
+                <button id="show-more-btn"
+                    class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition">
+                    Show More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cardContainer = document.querySelector(".destination-cards-container");
+            const cards = document.querySelectorAll(".destination-card");
+            const cardWidth = cards[0].offsetWidth + 20; // Card width + margin
+            let scrollPosition = 0;
+
+            // Auto-scroll function
+            function autoScroll() {
+                scrollPosition += cardWidth;
+                if (scrollPosition >= cardContainer.scrollWidth) {
+                    scrollPosition = 0; // Reset to the beginning
+                }
+                cardContainer.scrollTo({
+                    left: scrollPosition,
+                    behavior: "smooth"
+                });
+            }
+
+            // Set interval for auto-scroll
+            let scrollInterval = setInterval(autoScroll, 1000); // Adjust time as needed
+
+            // Optional: Pause auto-scroll on hover
+            cardContainer.addEventListener("mouseenter", () => {
+                clearInterval(scrollInterval);
+            });
+
+            cardContainer.addEventListener("mouseleave", () => {
+                scrollInterval = setInterval(autoScroll, 1000);
+            });
+        });
+    </script>
+</body>
+
+</html>
